@@ -1,0 +1,86 @@
+# ===================
+#        MISC       #
+# ===================
+# Enable Auto Fixing.
+fix = true
+
+# Enumerate all fixed violations.
+show-fixes = true
+
+# By default, always show source code snippets.
+show-source = true
+
+# Allow imports relative to the "src" and "test" directories.
+src = ["."]
+
+task-tags = ["TODO"]
+
+# Assume Python 3.9.*
+target-version = "py39"
+
+# Set the cache directory to `logs/ruff_cache`.
+cache-dir = "logs/ruff_cache"
+
+# Group violations by containing file.
+# This is output message format; nothing about coding
+# Options: ["text" | "json" | "junit" | "github" | "gitlab" | "pylint" | "azure"]
+format = "pylint"
+
+# Same as Google Python Style Guide.
+line-length = 80
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+# ===================
+#        Main       #
+# ===================
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = [
+    "E", "F",
+    # pydocstyle
+    "D",
+    # pyupgrade
+    "UP",
+    ]
+
+# Ignore a variety of commonly ignored errors.
+ignore = ["E203", "E402", "E501", "F401", "F841"]
+
+ignore-init-module-imports = true
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+# Ref: https://beta.ruff.rs/docs/rules/#ruff-specific-rules-ruf
+fixable = ["ALL"]
+unfixable = []
+
+# In addition to the standard set of exclusions, omit all tests, plus a specific file.
+extend-exclude = ["logs", "data"]
+
+# In addition to the standard set of inclusions, include `.pyw` files.
+extend-include = ["*.ipynb"]
+
+# ===================
+#     Additional    #
+# ===================
+
+[pycodestyle]
+# Ignore long comments for TODO, FIXME, XXX
+ignore-overlong-task-comments = true
+max-doc-length = 120
+
+[pydocstyle]
+# Use Google-style docstrings.
+# Accepts: "google", "numpy", or "pep257".
+convention = "google"
+
+[pyupgrade]
+# Preserve types, even if a file imports `from __future__ import annotations`.
+keep-runtime-typing = false
+
+[per-file-ignores]
+# Ignore `E402` (import violations) in all `__init__.py` files, and in `path/to/file.py`.
+"__init__.py" = ["E402"]
