@@ -9,4 +9,4 @@ filenames = [
 ]
 
 if __name__ == "__main__":
-    upload_file(filenames, "1Ldp_44E2hiJn9g5e8G0v-IwlZDLT9V6y")
+    upload_file(filenames, ["1Ldp_44E2hiJn9g5e8G0v-IwlZDLT9V6y"])

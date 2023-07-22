@@ -21,10 +21,10 @@ class UpdateFileCheck(BaseModel):
 
     Args:
         targets (list[str]): This is a function to check if the input is a list of strings.
-        target_folder_id (str): String of the folder from Google Drive.
+        target_folder_id (str): list of string of the folder from Google Drive.
     """
     targets: list[str]
-    target_folder_id: str
+    target_folder_id: list[str]
 
 
 class CreateFolderCheck(BaseModel):
@@ -32,10 +32,10 @@ class CreateFolderCheck(BaseModel):
 
     Args:
         foldername (list): This should be a path of a folder.
-        target_folder_id (str): String of the folder from Google Drive.
+        target_folder_id (list[str]): list of string of the folder from Google Drive.
     """
     foldername: list
-    target_folder_id: str
+    target_folder_id: list[str]
 
 
 def get_execution(file_metadata: dict, media=None):
