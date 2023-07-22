@@ -1,7 +1,7 @@
 [project]
-name = "upload"
+name = "file_uploader"
 version = "0.1.0"
-description = "Add your description here"
+description = "This is a simple file uploader to Google Drive"
 authors = [
     { name = "Mai", email = "21039366+Mai0313@users.noreply.github.com" }
 ]
