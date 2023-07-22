@@ -19,9 +19,7 @@
 2. Create your own Ouath file called `client_secret.json`
 3. Rename `client_secret.json` to `credentials.json`
 
-### Once you run this program, you will see a this screen
-
-![Oauth Screen](./image/ouath.png)
+### Once you run this program, you will see a panel tells you to login
 
 ### Just do whatever it tells you to do.
 
