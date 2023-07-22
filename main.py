@@ -5,7 +5,7 @@ import os
 from src.upload import upload_file, create_folder
 
 filenames = [
-    os.path.abspath(os.path.join("demo", f)) for f in os.listdir("demo")
+    os.path.abspath(os.path.join("backup", f)) for f in os.listdir("backup")
 ]
 
 if __name__ == "__main__":
