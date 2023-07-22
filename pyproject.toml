@@ -1,5 +1,5 @@
 [project]
-name = "file_uploader"
+name = "google-drive-uploader"
 version = "0.1.0"
 description = "This is a simple file uploader to Google Drive"
 authors = [
