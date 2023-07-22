@@ -1,3 +1,13 @@
+# Google Drive Updater
+
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Mai0313/Google-Drive-Uploader/master.svg)](https://results.pre-commit.ci/latest/github/Mai0313/Google-Drive-Uploader/master)
+
+### This is a simple program that can help you upload your file to Google Drive
+
+#### In the pass, uploading files to Google Drive was a little bit annoying, so I made this program to help me upload my file to Google Drive.
+
+#### The point is making it easier to upload files to Google Drive.
+
 ## The Main Feature
 
 - `upload_file`: Upload your file to Google Drive, EXCEPT `folder`
