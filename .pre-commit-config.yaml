@@ -12,6 +12,7 @@ repos:
               "--config",
               ".ruff.toml",
               "--fix",
+              "--no-cache",
             ]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks

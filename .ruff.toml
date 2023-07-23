@@ -48,7 +48,7 @@ select = [
     ]
 
 # Ignore a variety of commonly ignored errors.
-ignore = ["E203", "E402", "E501", "F401", "F841"]
+ignore = ["E203", "E402", "E501", "F401", "F841", "D100", "D101", "D103", "D104", "D102", "D107"]
 
 ignore-init-module-imports = true
 
