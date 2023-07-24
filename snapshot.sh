@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-BACKUP_TARGET_DIR="/home/wei/demo/backup"
+BACKUP_TARGET_DIR="/home/csgoserver/demo/backup"
 BACKUP_SOURCE_DIR="/home/csgoserver/csgo5v5/serverfiles/csgo"
 
 # Copy files
@@ -24,7 +24,9 @@ for file in *dem; do
     mkdir -p $date
 
     # Move file to its date directory and remove the original file
-    mv $file $date && rm -rf $file
+    mv $file $date
+    echo "removing original files from ${BACKUP_SOURCE_DIR}/${file}"
+    rm -rf ${BACKUP_SOURCE_DIR}/$file
 
     # Compress date directory into a tar.gz file and remove the date directory
     tar zcvf ${date}.tar.gz $date && rm -rf $date
