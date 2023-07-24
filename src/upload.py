@@ -12,6 +12,11 @@ def get_execution(file_metadata: dict, media=None):
                                   fields='id').execute()
     return file.get('id')
 
+def clean_backup(targets):
+    for target in targets:
+        cmd = f"rm -rf {target}"
+        os.system(cmd)
+        print(f"{target} has been removed")
 
 def upload_file(targets: list, target_folder_id: str = None):
     UpdateFileCheck(targets=targets, target_folder_id=target_folder_id)
