@@ -4,7 +4,7 @@ default_language_version:
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.0.277
+    rev: v0.0.280
     hooks:
       - id: ruff
         args:
@@ -34,14 +34,14 @@ repos:
           - --maxkb=100
 
   - repo: https://github.com/google/yapf.git
-    rev: v0.40.1
+    rev: v0.40.0
     hooks:
       - id: yapf
         args: [-r, -i, -p, -vv, --style, "{based_on_style: google}"]
 
   # md formatting
   - repo: https://github.com/executablebooks/mdformat.git
-    rev: 0.7.14
+    rev: 0.7.16
     hooks:
       - id: mdformat
         args: ["--number"]
